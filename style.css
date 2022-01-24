@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;  
+} /*   */
+header{
+    background-color: cornflowerblue;
+    width: 100%;
+    position:fixed;/* بتخلي رأس الصفحة ثابت أثناء الترحيك للأسفل   */
+    z-index: 999; /*جعل الهيدر أعلى كل العناصر */
+    display: flex;
+    justify-content: space-between;/* بتعمل مسافة بين العناصر ضمن الشيدر */ 
+    padding: 10px 180px; /* الهوامش */ 
+}
+.logo{
+    text-decoration: none;/* الخط السفلي بين العناصر */
+    color: white;
+    font-weight: 300;
+    font-size: 1.8em; 
+}
+ 
+.navigation a {
+    color: white;
+    text-decoration: none; /* الخط السفلي بين العناصر */ 
+    font-size: 1.1em;
+    font-weight: 200;
+    padding-left: 30px;
+}
+.navigation a:hover{
+    color :darkslateblue;
+}
+
+section{
+    padding: 100px 200px ;
+}
+
+.main{
+    width: 100%;/* انتبخي للعرض بالمية أفضل */ 
+    min-height: 100vh; /* vh تعني تغطي على كامل الاجزاء الأخرى بالنسبة للعرض مهما تغير */ 
+    display: flex;
+    align-items: center;
+    background: url(image/back.jpg) no-repeat ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;/* هي يلي بتخلي الخليفة ثابت أثناء التحريك تأثير حلو */ 
+}
+
+.main h2 {
+    color: white;
+    font-size 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block; /*هي لنو العنصر سبين متضمن مشان نخلص منحط هالخاصية*/ 
+    margin-top: 10px;
+    color: cornflowerblue;
+    font-size: 2em;
+    font-weight: 400;
+}
+.main h3 {
+    color:white;
+    font-size: 2em;
+    font-weight: 700 px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom:30px;
+}
+
+
+.main-btn{/*  هاد العنصر كمان ما بينعملو هوامش لانو متل السبيان عنصر متضمن */ 
+    color: white;
+    background-color: cornflowerblue;
+    text-decoration: none;
+    font-size: 1.1em; 
+    font-weight: 600;
+    display: inline-block; /*هي مشان العنصر المتضمن */ 
+    padding: 0.9375em 2.1875em; /* هون حولنا من البكسل لل اي ام مشان التنسيق التكبير والتصغير بين الأجهزة  */
+    /* ما بيشتغل padding الا اذا كنا مفعلين display */ 
+    letter-spacing: 1px;
+    border-radius: 15px;/* هي بتساوي الحواف ناعمة للزر */
+    margin-bottom: 40px;
+    transition:0.7s ease;/* هي مشان زمن التحول يكون بطيء*/
+}
+.main-btn:hover{
+    background-color: aliceblue;
+    transform: scale(1.1); /* هي بتكبر الزر وبتكبير اكس واي بس اذا تركنا  بمتغير واحد بتغير على اكس وواي وضروري اضافة فوق زمن التحول */ 
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.1em;
+    padding: 20px; 
+}
+.title{  /* هي مشان يصير الكلمة بالنص فقط */
+    display: flex;
+    justify-content: center;
+    color: white; 
+    font-size: 2.2em;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row; /* هي مشان العناصر كيف يترتبو مهمة فوق بعض او تحت بعض */ 
+    flex-wrap: wrap ;/* هي مشان العناصر ما تصغر وقت بتصغر الشاشة بضل حجمها وبتنزل لتحت*/ 
+}
+
+.card{
+    background-color: white;
+    width: 15em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);/* هي التظليل ورا المربع المتغيرات بالترتيب يمين او يسار ثم  الالوان بعدين الشفافية */ 
+    border-radius:10px;
+    padding: 25px; /* مساحة ضمن العنصر */
+    margin: 12px; /* مساحة بين العناصر */ 
+    transition: 0.75s ease;
+}
+.card:hover{
+    background-color: aliceblue;
+    transform: scale(1.1);
+}
+
+.icon{
+    color:cornflowerblue;
+    font-size: 2em;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+
+.info h3 {
+    color: cornflowerblue;
+    font-size: 1em;
+    font-weight : 500;
+    margin: 10px;  
+}
+
+.projects{
+    background-color: dodgerblue;
+}
+
+.projects .content{
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: white;
+    border: 0.2px solid ;
+    min-height: 14em;
+    width: 15em;
+    overflow: hidden; /* عركزنا الكرت ضمن الحاوية */
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.75s ease;   
+}
+
+.project-card:hover{
+     transform: scale(1.1);
+}
+
+.project-image img {
+    width: 100%; /* هيك بتزبط الصورة بقلب الحاوية */ 
+    
+}
+.project-card:hover .project-image{
+     opacity: 0.9; /*عطينا شوية شفافية للصورة اثناء التحديد*/ 
+}
+
+.project-info{
+    padding: 1em;
+}
+
+.project-category{
+    font-size: 0.8em;
+    
+}
+
+.project-title{
+   display: flex; 
+    justify-content: space-between;/* عمل مسافة بين العناصر الاطفال بالحاوية */
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 0.7em;
+}
+.more-details{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.more-details:hover{
+    color: darkturquoise;
+}
+.contact .icon{
+    font-size: 1.8em;
+}
+
+.contact .info h3 {
+    color: black;
+}
+
+.contact .info p {
+    font-size: 0.7em;
+}
+.footer{
+    background-color: cornflowerblue;
+    color: white;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-title{
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+.footer-title span{
+    color: blue;
+    font-size: 1.4em;
+}
+
+.footer .social-icons a{
+    font-size: 0.8em;
+    padding: 0 12px 0 0;
+}
+
+@media ( max-width:1023px){
+    header {
+        padding: 12px 20px;
+    }
+    .navigation a {
+        padding-left: 10px;
+    }
+    .title{
+        font-size: 1.8em;
+    }
+    section{
+        padding: 88px 20px;
+    }
+    .main-content h2 {
+        font-size: 1em;
+    }
+    .main-content h3{
+        font-size: 1.6em;
+        
+    }
+    
+    .content{
+        flex-direction: column; /* نلاحظ الفرق بالمتغيرات لانو حسب قيمة flex منحط القيمة بالمتغير يلي بعد */ 
+        align-items: center; 
+    }
+}
+
+
+@media (max-width:641px){
+    body{
+        font-size: 14px; /* عملنا هيك مان التغيريكون على كامل الصفحة بتصير القيايسات   1em = 12 
+        1em = 12
+        1em= 16 */
+    }
+    .main-content h2{
+        font-size: 0.8em;
+    }
+
+    .main-content h3{
+        font-size: 1.4em;
+    }
+    
+    
+}
+
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+     
+    }
+}
+
+
